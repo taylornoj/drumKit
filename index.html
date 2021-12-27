@@ -63,8 +63,8 @@
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if(!audio) return; // stop function from running
     audio.currentTime = 0; // rewind to start so we are able to play keys over without delay
-
     audio.play();
+    key.classList.add('playing');
 
   });
 
